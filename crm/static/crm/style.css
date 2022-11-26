@@ -1,0 +1,15 @@
+
+
+html,body,
+.wrapper {
+	height: 100%;
+}
+.content {
+	box-sizing: border-box;
+	min-height: 100%;
+	padding-bottom: 30px;
+}
+footer {
+	height: 60px;
+	margin-top: -60px !important;
+}

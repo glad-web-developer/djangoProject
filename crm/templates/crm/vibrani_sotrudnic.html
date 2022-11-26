@@ -1,0 +1,33 @@
+{% extends 'crm/base.html' %}
+{% block Content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/">Назад</a>
+        </div>
+
+        <div class="col-12">
+            <h1> {{ sotrudnic.fio }} </h1>
+        </div>
+        {% if sotrudnic.photo %}
+            <div class="col-12 col-md-6">
+
+                <img class="img-fluid" src="{{ sotrudnic.photo.url }}">
+
+            </div>
+        {% endif %}
+
+        <div class="col-12 {% if sotrudnic.photo %}col-md-6 {% else %}col-md-12{% endif %}">
+            <p>Дата рождения: {{ sotrudnic.data_rozdenia }}</p>
+            <p>Дата рождения: {{ sotrudnic.dolznost }}</p>
+            <p>Отдел: {{ sotrudnic.otdel }}</p>
+            <p>Почта: {{ sotrudnic.email }}</p>
+            <p>Телефон: {{ sotrudnic.telephone }}</p>
+            <p>Пол: {{ sotrudnic.get_pol_display }}</p>
+            <p>Пользователь: {{ sotrudnic.user|default_if_none:'нет' }}</p>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
