@@ -9,7 +9,9 @@
             </div>
 
             <form method="get" class="col-12 d-flex mb-3">
-                <input value="{{ fio }}" type="text" name="fio" class="form-control w-75 me-3" placeholder="Поиск">
+                <input type="text" name="fio" class="form-control w-75 me-3" placeholder="Поиск">
+
+
                 <select class="form-control w-25 me-3" name="otdel">
                     <option value="">Все</option>
                     {% for i_otdel in otdel_list %}
